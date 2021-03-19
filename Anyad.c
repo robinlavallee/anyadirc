@@ -73,7 +73,7 @@ int nCmdShow
 	
 	wnd = wc.lpfnWndProc;
 	wc.hInstance = g_hInst;
-	lstrcpy((LPSTR) wc.lpszClassName, "EDITOR");
+	wc.lpszClassName = "EDITOR";
 	wc.lpfnWndProc = (WNDPROC) EditWndProc;
 	if (!RegisterClass(&wc))
 		MessageBox(NULL, "Impossible de registrer la classe edit", "Anyad", MB_OK);
