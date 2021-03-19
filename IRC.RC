@@ -1,0 +1,79 @@
+/****************************************************************************
+
+
+allo.rc
+
+produced by Borland Resource Workshop
+
+
+*****************************************************************************/
+
+
+#define IDC_EDIT7	105
+#define IDC_BORSTATIC1	105
+#define IDC_NICKNAME	104
+#define IDC_EDIT6	104
+#define IDC_USERNAME	103
+#define IDC_EDIT5	103
+#define TXT_EDIT	102
+#define IDC_EDIT4	102
+#define TXT_IRC	101
+#define IDC_EDIT3	101
+#define FRM_LOGIN	114
+#define IDC_SERVER	101
+#define IDC_PORT	102
+#define IDC_EDIT2	102
+#define IDC_EDIT1	101
+#define CM_LOGIN	1
+#define CM_FILEITEM1	62704
+#define CM_ITEM1	62556
+#define FRM_ABOUT	113
+#define IDC_BORRADIO1	101
+#define IDM_EXIT	2
+#define IDD_ABOUT	1
+MENU MENU 
+{
+ POPUP "&Fichier"
+ {
+  MENUITEM SEPARATOR
+  MENUITEM "Connexion...", CM_LOGIN
+  MENUITEM SEPARATOR
+  MENUITEM "&Sortir", 107
+ }
+
+ POPUP "&Aide"
+ {
+  MENUITEM SEPARATOR
+  MENUITEM "&À propos", 108
+ }
+
+}
+
+FRM_ABOUT DIALOG 200, 120, 240, 92
+STYLE DS_ABSALIGN | DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "À propos de..."
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDOK, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 84, 52, 50, 14
+ CONTROL "Ma première application Windows programmée en C.", -1, "static", SS_CENTER | WS_CHILD | WS_VISIBLE, 52, 26, 124, 17
+}
+
+FRM_LOGIN DIALOG 200, 100, 240, 120
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Connection à un serveur IRC"
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDOK, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 186, 6, 50, 14
+ CONTROL "Cancel", IDCANCEL, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 186, 26, 50, 14
+ CONTROL "voyager.dal.net", IDC_SERVER, "edit", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 16, 17, 108, 13
+ CONTROL "6666", IDC_PORT, "edit", ES_LEFT | ES_NUMBER | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 132, 17, 40, 13
+ CONTROL "Robin Lavallée", IDC_USERNAME, "edit", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 16, 34, 108, 12
+ CONTROL "Lawgiver", IDC_NICKNAME, "edit", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 16, 52, 108, 13
+}
+
+
+
+
+
+
+

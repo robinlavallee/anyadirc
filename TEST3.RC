@@ -1,0 +1,275 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRC)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_CANADIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_M MENU DISCARDABLE 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Open a log file",            ID_OPENLOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_QUITTER
+    END
+    POPUP "Co&nnection"
+    BEGIN
+        MENUITEM "Mon &IP adresse",             ID_MONIP
+        MENUITEM "&Connection a une IP spécifique", ID_CONNECTION
+    END
+    POPUP "Media"
+    BEGIN
+        MENUITEM "Loading a file",              ID_PLAYMEDIA
+        MENUITEM "Changer la switch des sons",  ID_SONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_ABOUT
+    END
+    MENUITEM "&Setup",                      ID_SETUP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PSCHAT"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,67,65,50,14
+    LTEXT           "PSCHAT version ALPHA made by                                                                                          PYR0S",
+                    IDC_STATIC,32,19,119,31
+END
+
+IDD_CONNECTION DIALOG DISCARDABLE  0, 0, 223, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Connection vers une IP adresse"
+FONT 11, "MS Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,166,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,166,24,50,14
+    LTEXT           "IP Adresse où connecter :",IDC_STATIC,13,15,83,10
+    EDITTEXT        IDC_IPAD,96,14,63,12,ES_UPPERCASE
+    LTEXT           "Votre pseudonyme :",IDC_STATIC,30,30,64,10
+    EDITTEXT        IDC_PSEUDONYME,96,29,63,12
+    LTEXT           "Votre vrai nom :",IDC_STATIC,43,47,49,9
+    EDITTEXT        IDC_REALNAME,96,47,63,12
+END
+
+IDD_MEDIA DIALOGEX 0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Playeur Media"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LISTBOX         IDC_MEDIALIST,7,7,112,81,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_ACCEPTFILES
+END
+
+IDD_CONNECT_SETUP DIALOG DISCARDABLE  0, 0, 286, 223
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Connection Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDCONNECT,220,88,59,15,BS_CENTER
+    PUSHBUTTON      "Cancel",IDCANCEL,220,104,59,15
+    LTEXT           "Repertoire du .ini : ",IDC_STATIC,18,198,144,11
+    CONTROL         "Auto Connect",IDC_ACONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,221,121,58,10
+    GROUPBOX        "Informations générales",IDC_STATIC,7,129,272,87
+    EDITTEXT        IDC_NICKNAME2,74,183,181,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NICKNAME1,74,170,182,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EMAIL,74,156,182,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REALNAME,74,141,181,12,ES_AUTOHSCROLL
+    LTEXT           "Name :",IDC_STATIC,38,143,25,8
+    LTEXT           "Email adresse :",IDC_STATIC,14,156,48,8
+    LTEXT           "Nickname :",IDC_STATIC,25,171,37,8
+    LTEXT           "Alternatif :",IDC_STATIC,30,183,33,8
+    CONTROL         "+w <Wallops>",IDC_WALLOPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,173,15,60,13
+    CONTROL         "+i   <Invisible>",IDC_INVISIBLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,173,28,76,13
+    CONTROL         "+s  <Messages du serveur>",IDC_SERVMSG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,173,41,101,13
+    GROUPBOX        "Modes",IDC_STATIC,169,7,110,79
+    PUSHBUTTON      "Editer / Server list",IDC_EDIT_SERVLIST,151,88,63,15,
+                    BS_MULTILINE
+    LISTBOX         IDC_LISTSERVER,10,31,137,93,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "+o  <IRCop>",IDC_IRCOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,173,57,92,9
+    EDITTEXT        IDC_EDIT1,197,69,78,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_LISTNETWORK,45,16,101,15,CBS_DROPDOWN | 
+                    CBS_UPPERCASE | WS_GROUP | WS_TABSTOP
+    LTEXT           "Network :",IDC_STATIC,12,17,34,9
+END
+
+IDD_OPENLOG DIALOG DISCARDABLE  0, 0, 318, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open A log"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Path:",-1,7,7,36,8
+    LTEXT           "Selected:",-1,7,60,40,8
+    EDITTEXT        IDE_SELECTED,51,61,200,12,ES_AUTOHSCROLL
+    LTEXT           "",stc32,43,20,204,31
+    EDITTEXT        IDE_PATH,45,7,200,12,ES_AUTOHSCROLL
+END
+
+IDD_SERVEDIT DIALOG DISCARDABLE  0, 0, 380, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Network & Server editor"
+FONT 10, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,312,123,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,312,139,50,14
+    PUSHBUTTON      "Add a Network",IDC_BUTTON1,8,7,65,17
+    PUSHBUTTON      "Remove a Network",IDC_BUTTON2,75,7,65,17
+    LISTBOX         IDC_LISTNETWORK,7,28,134,153,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LISTSERVER,145,28,159,153,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add a Server",IDC_BUTTON3,146,7,79,18
+    PUSHBUTTON      "Remove a Server",IDC_BUTTON4,228,7,76,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_CONNECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_MEDIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_CONNECT_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_OPENLOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 311
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SERVEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 373
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CONNECT_SETUP DLGINIT
+BEGIN
+    IDC_LISTNETWORK, 0x403, 1, 0
+"\000" 
+    0
+END
+
+#endif    // French (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,368 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRC)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_CANADIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+FRM_RAW DIALOG DISCARDABLE  0, 0, 239, 42
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Envoyer",IDOK,129,7,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,179,7,50,14
+    LTEXT           "Données à envoyer :",IDC_STATIC,7,7,71,12
+    EDITTEXT        IDC_DATA,7,23,222,12,ES_AUTOHSCROLL
+END
+
+FRM_ABOUT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Anyad Pre-Release 0.01"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,59,64,50,14
+    LTEXT           "Anyad",IDC_STATIC,69,13,47,12
+    LTEXT           "My little, somehow lame IRC program I created for myself... and for someone at the same time.",
+                    IDC_STATIC,34,31,121,31
+END
+
+FRM_MEDIA DIALOG DISCARDABLE  0, 0, 177, 138
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Media Player"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Play",IDPLAY,119,78,50,14
+    PUSHBUTTON      "&Exit",IDEXIT,120,96,50,14
+    LISTBOX         IDC_MEDIA,7,7,110,104,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DIR,7,116,163,15,ES_AUTOHSCROLL
+END
+
+FRM_PREF_1 DIALOG DISCARDABLE  0, 0, 238, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Chemin d'accès"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SOUNDDIR,111,16,81,16,ES_AUTOHSCROLL
+    LTEXT           "Répertoire des sons:",IDC_STATIC,13,16,95,16
+    LTEXT           "Répertoire des fichiers .log",IDC_STATIC,13,38,95,16
+    EDITTEXT        IDC_LOGDIR,111,38,81,16,ES_AUTOHSCROLL
+END
+
+FRM_PREF_2 DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Test2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fun!",IDC_STATIC,69,46,42,22
+END
+
+FRM_CONNECT_SETUP DIALOG DISCARDABLE  0, 0, 286, 223
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Connection Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Connect",ID_CONNECT,220,88,59,15,BS_CENTER
+    PUSHBUTTON      "Cancel",IDCANCEL,220,104,59,15
+    LTEXT           "Repertoire du .ini : ",IDC_STATIC,18,198,144,11
+    CONTROL         "Auto Connect",IDC_ACONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,221,121,58,10
+    GROUPBOX        "Informations générales",IDC_STATIC,7,129,272,87
+    EDITTEXT        IDC_NICKNAME2,74,183,181,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NICKNAME1,74,170,182,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EMAIL,74,156,182,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REALNAME,74,141,181,12,ES_AUTOHSCROLL
+    LTEXT           "Name :",IDC_STATIC,38,143,25,8
+    LTEXT           "Email adresse :",IDC_STATIC,14,156,48,8
+    LTEXT           "Nickname :",IDC_STATIC,25,171,37,8
+    LTEXT           "Alternatif :",IDC_STATIC,30,183,33,8
+    CONTROL         "+w <Wallops>",IDC_WALLOPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,173,15,60,13
+    CONTROL         "+i   <Invisible>",IDC_INVISIBLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,173,28,76,13
+    CONTROL         "+s  <Messages du serveur>",IDC_SERVMSG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,173,41,101,13
+    GROUPBOX        "Modes",IDC_STATIC,169,7,110,79
+    PUSHBUTTON      "Editer / Server list",IDC_EDIT_SERVLIST,151,88,63,15,
+                    BS_MULTILINE
+    LISTBOX         IDC_LISTSERVER,10,34,137,90,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "+o  <IRCop>",IDC_IRCOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,173,57,92,9
+    EDITTEXT        IDC_EDIT1,197,69,78,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Network :",IDC_STATIC,15,17,34,9
+    COMBOBOX        IDC_LISTNETWORK,67,14,80,12,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+FRM_JOIN DIALOG DISCARDABLE  0, 0, 130, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Joindre un channel"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,30,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,73,31,50,14
+    LTEXT           "Entrez le channel a joindre:",IDC_STATIC,7,7,94,9
+    EDITTEXT        IDC_CHANNEL,7,17,116,12,ES_AUTOHSCROLL
+END
+
+FRM_CREATE_WINDOW DIALOG DISCARDABLE  0, 0, 126, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Création d'une fenêtre"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,38,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,58,38,50,14
+    LTEXT           "Fenetre a créer :",IDC_STATIC,7,7,112,11
+    EDITTEXT        IDC_CREATEWINDOW,7,17,101,15,ES_AUTOHSCROLL
+END
+
+FRM_ADD DIALOG DISCARDABLE  0, 0, 189, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ajout d'un nom"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,77,47,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,78,63,50,14
+    LTEXT           "Nom à ajouter:",IDC_STATIC,14,10,48,11
+    LTEXT           "Nom du channel:",IDC_STATIC,7,23,56,10
+    EDITTEXT        IDC_NICK,66,7,116,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHAN,66,23,116,13,ES_AUTOHSCROLL
+    CONTROL         "Op",IDC_OP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,54,
+                    26,14
+    CONTROL         "Voice",IDC_VOICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    14,73,44,11
+    GROUPBOX        "Flags",IDC_STATIC,7,45,64,50
+END
+
+FRM_TOPIC DIALOG DISCARDABLE  0, 0, 257, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Changé le sujet d'un channel"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,53,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,133,42,50,14
+    EDITTEXT        1014,29,20,204,13,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    FRM_RAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 35
+    END
+
+    FRM_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    FRM_MEDIA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    FRM_PREF_1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    FRM_PREF_2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    FRM_CONNECT_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    FRM_JOIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    FRM_CREATE_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    FRM_ADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    FRM_TOPIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Connection...",              ID_CONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_QUIT
+    END
+    POPUP "&Channel"
+    BEGIN
+        MENUITEM "&Joindre un channel",         ID_JOINCHANNEL
+        MENUITEM "&Changer le sujet d'une channel...", ID_TOPIC
+    END
+    POPUP "&Debug"
+    BEGIN
+        MENUITEM "&Créer une window pour tester...", ID_CREATEWINDOW
+        MENUITEM "&Ajouter un nom à la liste...", ID_ADD
+        MENUITEM SEPARATOR
+        MENUITEM "&Command directe...",         ID_RAW
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Preferences...",             ID_PREFS
+        MENUITEM SEPARATOR
+        MENUITEM "&ReInit",                     ID_REINIT
+    END
+    POPUP "&Outils"
+    BEGIN
+        MENUITEM "&Média...",                   ID_MEDIA
+    END
+    POPUP "&Fenetres"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_CASCADE
+        MENUITEM "&Tile",                       ID_TILE
+    END
+    POPUP "&Aide"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "&À propos de",                ID_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+FRM_CONNECT_SETUP DLGINIT
+BEGIN
+    IDC_LISTNETWORK, 0x403, 8, 0
+0x7361, 0x7366, 0x6461, 0x0066, 
+    IDC_LISTNETWORK, 0x403, 4, 0
+0x4f59, 0x0021, 
+    IDC_LISTNETWORK, 0x403, 6, 0
+0x616d, 0x616d, 0x006e, 
+    IDC_LISTNETWORK, 0x403, 10, 0
+0x7570, 0x7369, 0x6173, 0x636e, 0x0065, 
+    0
+END
+
+#endif    // French (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
